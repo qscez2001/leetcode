@@ -21,7 +21,7 @@ def reverse(s):
   for i in s: 
     str = i + str
   return str
-
+# my solution
 def addTwoNumbers(l1, l2):
     str1 = ''
     str2 = ''
@@ -57,6 +57,7 @@ def addTwoNumbers(l1, l2):
         current = current.next
 
     return l3
+
 
 print(addTwoNumbers(l1,l2))
 

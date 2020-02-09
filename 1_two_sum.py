@@ -1,6 +1,6 @@
 
 
-# Brute Force
+# Brute Force: my solution
 def twoSum(nums, target):
     for i in range(len(nums)-1):
         print("i=", i)
