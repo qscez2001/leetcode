@@ -43,6 +43,16 @@ def longestCommonPrefix(self, strs):
         else: break
     return r
 
+# def longestCommonPrefix(strs):
+#     if (len(strs) == 0): return ""
+#     prefix = strs[0]
+#     for i in range(1, len(strs)):
+#         while (strs[i].find(prefix) != -1):
+#             prefix = prefix
+#             if (prefix.isEmpty()): return ""
+    
+#     return prefix
+
 
 input = ["flower","flow","flight"]
 input = ["dog","racecar","car"]

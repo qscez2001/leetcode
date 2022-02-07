@@ -12,7 +12,7 @@ def reverse(self, x: int) -> int:
     for i in stri:
         new = i + new
         
-    if int(new) > pow(2, 31) - 1 or int(new) < -pow(2, 31):
+    if int(new) > pow(2, 31) - 1:
         return 0
         
     if negative:

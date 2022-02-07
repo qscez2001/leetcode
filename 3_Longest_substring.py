@@ -1,4 +1,4 @@
-# Brute force: my solution
+# Brute force: my solution O(n^3)
 s1 = "bcaabcbb"
 s2 = "bbbbb"
 s3 = "pwwkew"
@@ -13,11 +13,34 @@ def lengthOfLongestSubstring(s):
                 temp.append(s[j])
             else:
                 break
+        # print(temp)
         if len(temp) > maxlen:
             maxlen = len(temp)
     return maxlen
 
-# print(lengthOfLongestSubstring(s1))
+# brute force
+from collections import defaultdict
+def lengthOfLongestSubstring(self, s: str) -> int:
+    
+    def check(start, end):
+        chars = defaultdict(lambda: 0)
+        for i in range(start, end + 1):
+            c = s[i]
+            chars[c] += 1
+            if chars[c] > 1:
+                return False
+        return True
+    
+    res = 0
+    n = len(s)
+    for i in range(n):
+        for j in range(i, n):
+            # check if string duplicate
+            if check(i, j):
+                res = max(res, j-i+1)
+    return res
+
+print(lengthOfLongestSubstring(s1))
 
 # others (slide window)
 def lengthOfLongestSubstring(s):

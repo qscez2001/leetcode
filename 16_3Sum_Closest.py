@@ -20,7 +20,7 @@ def threeSumClosest(nums, target):
 
     return ans
 
-# ref to 15 other solution and modify
+# ref to Problem 15 other solution and modify O(n^2)
 def threeSumClosest(nums, target):
     list_of_list = []
     nums.sort()
